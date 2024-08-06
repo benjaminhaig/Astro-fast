@@ -1,0 +1,13 @@
+---
+import Counter from "../components/Counter";
+import Layout from "../layouts/Layout.astro";
+import "../styles/index.sass";
+import dogImage from "../assets/dogs.jpeg";
+import { Image } from "astro:assets";
+---
+
+<Layout>
+	<h1 class="text-xl">Astro</h1>
+	<Counter client:load />
+	<Image src={dogImage} alt="Cute Dogs!" width={500} height={400} />
+</Layout>
